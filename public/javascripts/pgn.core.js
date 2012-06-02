@@ -96,8 +96,7 @@ PGN.core = (function ($) {
         });
       },
 
-      getDescription: function(key, right) {
-        alert('DESC');
+      getDescription: function(key) {
         var state = '';
         var city = '';
         var county = '';
@@ -119,21 +118,20 @@ PGN.core = (function ($) {
           url: '/rights?state=' + state + '&city=' + city + '&county=' + county,
           dataType: 'json',
           success: function (data) {
-            alert('DATA');
             var html = 'Test';
             if (data) {
-              var dataToUse = null;
+              var dataToUse = '';
               if (split.length == 1) {
                 dataToUse = data.state;
-              } else (split.length == 2) {
+              } else if (split.length == 2) {
                 dataToUse = data.county;
-              } else (split.length == 3) {
+              } else if (split.length == 3) {
                 dataToUse = data.city;
               }
-              alert('FOUND DATA');
-              if (dataToUse) {
+
+              if (dataToUse && dataToUse != '') {
                 $.each(dataToUse.rights, function (key2, value) {
-                  if (key2 == right) {
+                  if (key2 != '') {
                     if (value.description) {
                       html = value.description;
                     }
