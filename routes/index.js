@@ -8,6 +8,12 @@ module.exports = function(app) {
       subtitle: 'Rights where you are'
     });
   });
+  app.get('/moreinfo', express.query(), function(req, res) {
+    res.render('more_info', {
+      key: req.query.key,
+      right: req.query.right
+    });
+  });
   app.get('/rights', express.query(), function(req, res) {
     db.rights(req.query.state, req.query.county, req.query.city, function(err, data) {
       res.send(data);

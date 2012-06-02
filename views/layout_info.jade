@@ -1,0 +1,31 @@
+doctype 5
+html
+  head
+    != "<script type='text/javascript'>"
+    != "splitTitle = \"" + key + "\".split(':');"
+    != "document.title= splitTitle[splitTitle.length - 1];"
+    != "</script>"
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    script(src='javascripts/contrib/underscore-min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+    script(src='http://maps.googleapis.com/maps/api/js?key=AIzaSyDafRbnFoPXDxj0tmsocGeLHikCJ4Qz-T8&sensor=true')
+    script(src='javascripts/pgn.geo.js')
+    script(src='javascripts/pgn.core.js')
+
+  body
+    header
+      h1
+        a(href='/')
+          b.mark
+          h1#title
+            != "<script type='text/javascript'> splitTitle = \"" + key + "\".split(':'); document.getElementById(\"title\").innerHTML = splitTitle[splitTitle.length - 1]; </script>"
+          em= right
+
+    .content
+      script(type='text/javascript')
+        $(document).ready(function() {
+          PGN.core.getDescription();
+        });

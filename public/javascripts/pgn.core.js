@@ -50,14 +50,13 @@ PGN.core = (function ($) {
             var name = id[id.length - 1];
             list += '<li class="header">' + name + ' (' + key + ')<ul>';
             value.rights.forEach(function (right) {
-	      if (right.link) {
-		list += '<li class="' + right.value + '"><a href="' + right.link + '" target="_blank">' + right.display_name + '</a>';
+	      if (right.more_info) {
+		list += '<li class="' + right.value + '"><a href="/moreinfo?key=' + value.id.replace(" ", "%20") + '&right=' + right.name.replace(" ", "%20") + '" target="_blank">' + right.display_name + '</a>';
 	      } else {
 		list += '<li class="' + right.value + '">' + right.display_name;
 	      }
 
 	      if (right.condition) {
-		//list += '<ul class="none"><li class="none">' + right.condition + '</li></ul>';
 		list += ' (' + right.condition + ')';
 	      }
 	      list += '</li>';
@@ -83,11 +82,50 @@ PGN.core = (function ($) {
         });
       },
 
+      getDescription: function(key) {
+        var values = key.split(':')
+        var state = '';
+        var city = '';
+        var county = '';
+
+        if (value.length == 3) {
+          state = values[0];
+          city = values[1];
+          county = values[2];
+        } else if (value.length == 2) {
+          state = values[0];
+          city = values[1];
+        } else if (value.length == 1) {
+          state = values[0];
+        }
+
+        var redis = require('redis').createClient();
+        var data = {};
+
+        redis.get(state, function(err, val) {
+          data.state = JSON.parse(val);
+          redis.get(state + ':' + city, function(err, val) {
+            data.county = JSON.parse(val);
+            redis.get(state + ':' + city + ':' + county, function(err, val) {
+              data.city = JSON.parse(val);
+              fn(null, data);
+            });
+          });
+        });
+      },
+
       clear: function () {
         $('h2.user-location').removeClass('visible');
         $('p.address').html('');
         $('ul.rights li').remove();
       }
+
+      /*getTitle: function(key) {
+        var redis = require('redis').createClient();
+        redis.get(key, function(err, val) {
+          return JSON.parse(val)
+        });
+      }*/
   };
 
   return _self;
