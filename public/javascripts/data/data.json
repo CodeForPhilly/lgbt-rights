@@ -221,6 +221,7 @@
         "name": "domestic_partnership",
         "value": true,
         "display_name": "Domestic-partner registry"
+      }
     ]
   },
   {"id" : "PA:Berks:Reading",
