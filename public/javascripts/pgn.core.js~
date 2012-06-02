@@ -71,10 +71,9 @@ PGN.core = (function ($) {
         });
       },
 
-      saveData: function (state, rights, title, desc, link) {
-        $.post(
+      saveData: function () {        
+        $.ajax({
           url: '/load',
-          data: { id: state, rights: 
           dataType: 'json',
           success: function (data) {
             console.log(data);

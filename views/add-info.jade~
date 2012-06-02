@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  form.addinfo
+    <label>Choose State</label><br>
+    select.stateList
+       states = ['', 'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Conneticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Pennsylvania', 'Rhode Island']
+       abbrevs = ['', 'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'PA', 'RI']
+       for state in states
+         option(value=abbrevs[states.indexOf(state)]) #{state}
+    <br>
+    <label>Choose Right</label><br>
+    select.rightList
+       rights = ['', 'Marriage', 'Discrimination protections', 'Domestic-partner registry', 'Civil Union', 'Employment discrimination protections', 'Adoption rights', 'Legal gender change', 'Hate crimes protections', 'Bullying protection', 'Housing discrimination protections']
+       rightvals = ['', 'marrage', 'discrimination', 'domestic_partnership', 'civil union', 'employment', 'adoption', 'legal_gender_change', 'hate_crimes', 'bullying_protection', 'housing']
+       for right in rights
+         option(value=rightvals[rights.indexOf(right)]) #{right}
+    <br>
+    <label>Title</label>
+    input.Title
+    <label>Description</label>
+    input.Desc
+    <label>Link</label>
+    input.Link
+    span.button Submit
+  ul.rights
+
+block scripts
+  script(type='text/javascript')
+    $('span.button').click(function() {
+        PGN.core.clear();
+        PGN.core.saveData();
+      });
+
+      $('select.stateList').change(function () {
+        PGN.core.clear();
+
+        var inputVal = $('select.stateList').val();
+        PGN.geo.geocode(inputVal, function (response) {
+          var params = PGN.geo.parseResp(response[0]);
+          PGN.core.getData(params);
+        });
+      });
+    });
