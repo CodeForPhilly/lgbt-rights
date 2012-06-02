@@ -4,15 +4,18 @@
     "rights" : [
       {
   	    "name": "discrimination",
-        "value": false
+        "value": false,
+        "display_name": "Discrimination protections"
       },
       {
         "name": "marriage",
-        "value" : false
+        "value" : false,
+        "display_name": "Marriage"
       },
   	  {
         "name": "civil union",
-        "value" : false
+        "value" : false,
+        "display_name": "Civil Union"
       }
   	]
   },
@@ -21,11 +24,13 @@
     "rights" : [
     	{
         "name": "marriage",
-        "value": false
+        "value": false,
+        "display_name": "Marriage"
       },
       {
     	  "name": "civil union",
-        "value": false
+        "value": false,
+        "display_name": "Civil Union"
       }
     ]
   },
@@ -34,16 +39,18 @@
     "rights": [
       {
   	    "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
   {"id" : "PA:Allegheny",
-    "type" : "country",
+    "type" : "county",
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -52,7 +59,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -61,7 +69,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -70,7 +79,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -79,7 +89,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -88,7 +99,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -97,7 +109,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -106,7 +119,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -115,7 +129,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -124,7 +139,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -133,7 +149,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -142,7 +159,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -151,7 +169,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -160,7 +179,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -169,7 +189,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -178,11 +199,13 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       },
  	    {
         "name": "domestic_partnership",
-        "value": true
+        "value": true,
+        "display_name": "Domestic-partner registry"
       }
     ]
   },
@@ -191,11 +214,13 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       },
   	  {
         "name": "domestic_partnership",
-        "value": true
+        "value": true,
+        "display_name": "Domestic-partner registry"
     ]
   },
   {"id" : "PA:Berks:Reading",
@@ -203,7 +228,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -212,7 +238,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -221,7 +248,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -230,7 +258,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -239,7 +268,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -248,7 +278,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   },
@@ -257,7 +288,8 @@
     "rights" : [
   	  {
         "name": "discrimination",
-        "value": true
+        "value": true,
+        "display_name": "Discrimination protections"
       }
     ]
   }
