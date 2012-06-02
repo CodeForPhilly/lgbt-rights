@@ -49,15 +49,15 @@ PGN.core = (function ($) {
             var id = value.id.split(':');
             var name = id[id.length - 1];
             list += '<li class="header">' + name + ' (' + key + ')<ul>';
-            value.rights.forEach(function (right) {
-	      if (right.more_info) {
-		list += '<li class="' + right.value + '"><a href="/moreinfo?key=' + value.id.replace(" ", "%20") + '&right=' + right.name.replace(" ", "%20") + '" target="_blank">' + right.display_name + '</a>';
+            $.each(value.rights, function (key2, value) {
+	      if (value.more_info) {
+                list += '<li class="' + value.value + '"><a href="/more_info?key=' + key + '&right=' + key2 + '" target="_blank">' + value.display_name + '</a>';
 	      } else {
-		list += '<li class="' + right.value + '">' + right.display_name;
+                list += '<li class="' + value.value + '">' + value.display_name;
 	      }
 
-	      if (right.condition) {
-		list += ' (' + right.condition + ')';
+	      if (value.condition) {
+                list += ' (' + value.condition + ')';
 	      }
 	      list += '</li>';
             });
