@@ -82,35 +82,58 @@ PGN.core = (function ($) {
         });
       },
 
-      getDescription: function(key) {
-        var values = key.split(':')
+      getDescription: function(key, right) {
+        alert('DESC');
         var state = '';
         var city = '';
         var county = '';
+        var split = key.split(':');
 
-        if (value.length == 3) {
-          state = values[0];
-          city = values[1];
-          county = values[2];
-        } else if (value.length == 2) {
-          state = values[0];
-          city = values[1];
-        } else if (value.length == 1) {
-          state = values[0];
+        if (split.length >= 1) {
+          state = split[0];
         }
 
-        var redis = require('redis').createClient();
-        var data = {};
+        if (split.length >= 2) {
+          county = split[1];
+        }
 
-        redis.get(state, function(err, val) {
-          data.state = JSON.parse(val);
-          redis.get(state + ':' + city, function(err, val) {
-            data.county = JSON.parse(val);
-            redis.get(state + ':' + city + ':' + county, function(err, val) {
-              data.city = JSON.parse(val);
-              fn(null, data);
-            });
-          });
+        if (split.length == 3) {
+          city = split[2];
+        }
+
+        $.ajax({
+          url: '/rights?state=' + state + '&city=' + city + '&county=' + county,
+          dataType: 'json',
+          success: function (data) {
+            alert('DATA');
+            var html = 'Test';
+            if (data) {
+              var dataToUse = null;
+              if (split.length == 1) {
+                dataToUse = data.state;
+              } else (split.length == 2) {
+                dataToUse = data.county;
+              } else (split.length == 3) {
+                dataToUse = data.city;
+              }
+              alert('FOUND DATA');
+              if (dataToUse) {
+                $.each(dataToUse.rights, function (key2, value) {
+                  if (key2 == right) {
+                    if (value.description) {
+                      html = value.description;
+                    }
+                  }
+                });
+              }
+
+              $('.content p.desc').append(html);
+            }
+            console.log(data);
+          },
+          error: function (data) {
+            console.log(data);
+          }
         });
       },
 
@@ -119,13 +142,6 @@ PGN.core = (function ($) {
         $('p.address').html('');
         $('ul.rights li').remove();
       }
-
-      /*getTitle: function(key) {
-        var redis = require('redis').createClient();
-        redis.get(key, function(err, val) {
-          return JSON.parse(val)
-        });
-      }*/
   };
 
   return _self;
