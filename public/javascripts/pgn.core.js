@@ -49,11 +49,11 @@ PGN.core = (function ($) {
             var id = value.id.split(':');
             var name = id[id.length - 1];
             list += '<li class="header">' + name + ' (' + key + ')<ul>';
-            $.each(value.rights, function (key2, value) {
-	      if (value.more_info) {
-                list += '<li class="' + value.value + '"><a href="/more_info?key=' + key + '&right=' + key2 + '" target="_blank">' + value.display_name + '</a>';
+            $.each(value.rights, function (key2, value2) {
+	      if (value2.more_info) {
+                list += '<li class="' + value2.value + '"><a href="/moreinfo?key=' + value.id + '&right=' + key2 + '" target="_blank">' + value2.display_name + '</a>';
 	      } else {
-                list += '<li class="' + value.value + '">' + value.display_name;
+                list += '<li class="' + value2.value + '">' + value2.display_name;
 	      }
 
 	      if (value.condition) {
