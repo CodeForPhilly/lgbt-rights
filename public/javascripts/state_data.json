@@ -1,0 +1,2756 @@
+[
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   },
+   {
+      "id":"AL",
+      "type":"state",
+      "rights":{
+         "workplace_sexual_orientation":{
+            "value":false
+         },
+         "workplace_gender_identity":{
+            "value":false
+         },
+         "housing_sexual_orientation":{
+            "value":false
+         },
+         "housing_gender_identity":{
+            "value":false
+         },
+         "hatecrime_sexual_orientation ":{
+            "value":false
+         },
+         "hatecrime_gender_identity":{
+            "value":false
+         },
+         "marriage ":{
+            "value":false
+         },
+         "civil_union":{
+            "value":false
+         },
+         "domestic_partner ":{
+            "value":false
+         },
+         "outofstate_marriage_recognition":{
+            "value":false
+         },
+         "marriage_ban ":{
+            "value":true
+         },
+         "constitutional_marriage_ban":{
+            "value":false
+         },
+         "adoption_single":{
+            "value":true
+         },
+         "second_parent_adoption ":{
+            "value":false
+         },
+         "bullying_gender_identity ":{
+            "value":false
+         },
+         "bullying_sexual_orientation":{
+            "value":false
+         }
+      }
+   }
+]
