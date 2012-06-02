@@ -31,9 +31,9 @@ def zip list1, list2
 end
 
 def build_json root
-  right_names = ["workplacesexualorientation","workplacegenderidentity","housingsexualorientation","housinggenderidentity","hatecrimesexualorientation ","hatecrimegenderidentity","marriage ","civilunion","domesticpartner ","outofstatemarriagerecognition","marriageban ","constitutionalmarriageban","adoptionsingle","secondparentadoption ","bullyinggenderidentity ","bullyingsexualorientation"]
+  right_names = ["workplacesexualorientation","workplacegenderidentity","housingsexualorientation","housinggenderidentity","hatecrimesexualorientation ","hatecrimegenderidentity","marriage","civilunion","domesticpartner ","outofstatemarriagerecognition","marriageban","constitutionalmarriageban","adoptionsingle","secondparentadoption","bullyinggenderidentity","bullyingsexualorientation"]
 
-  right_name_map = {"workplacesexualorientation"=>"workplace_sexual_orientation", "workplacegenderidentity"=>"workplace_gender_identity", "housingsexualorientation"=>"housing_sexual_orientation", "housinggenderidentity"=>"housing_gender_identity", "hatecrimesexualorientation "=>"hatecrime_sexual_orientation ", "hatecrimegenderidentity"=>"hatecrime_gender_identity", "marriage "=>"marriage ", "civilunion"=>"civil_union", "domesticpartner "=>"domestic_partner ", "outofstatemarriagerecognition"=>"outofstate_marriage_recognition", "marriageban "=>"marriage_ban ", "constitutionalmarriageban"=>"constitutional_marriage_ban", "adoptionsingle"=>"adoption_single", "secondparentadoption "=>"second_parent_adoption ", "bullyinggenderidentity "=>"bullying_gender_identity ", "bullyingsexualorientation"=>"bullying_sexual_orientation"}
+  right_name_map = {"workplacesexualorientation"=>"workplace_sexual_orientation", "workplacegenderidentity"=>"workplace_gender_identity", "housingsexualorientation"=>"housing_sexual_orientation", "housinggenderidentity"=>"housing_gender_identity", "hatecrimesexualorientation"=>"hatecrime_sexual_orientation ", "hatecrimegenderidentity"=>"hatecrime_gender_identity", "marriage "=>"marriage", "civilunion"=>"civil_union", "domesticpartner"=>"domestic_partner", "outofstatemarriagerecognition"=>"outofstate_marriage_recognition", "marriageban"=>"marriage_ban", "constitutionalmarriageban"=>"constitutional_marriage_ban", "adoptionsingle"=>"adoption_single", "secondparentadoption"=>"second_parent_adoption", "bullyinggenderidentity"=>"bullying_gender_identity", "bullyingsexualorientation"=>"bullying_sexual_orientation"}
 
   locations = []
 
@@ -44,7 +44,7 @@ def build_json root
       rights = {}
 
       right_names.each do |name|
-        elem = location.elements["//gsx:#{name}"]
+        elem = location.elements["gsx:#{name}"]
         if not elem.nil?
           rights[right_name_map[name]] = {}
           rights[right_name_map[name]]["value"] = parse_text elem.text
@@ -53,7 +53,8 @@ def build_json root
         end
       end
 
-      state = location.elements["//gsx:state"].text
+      state = location.elements["gsx:state"].text
+      puts "state is now: #{state}"
       county = nil
       city = nil
 
