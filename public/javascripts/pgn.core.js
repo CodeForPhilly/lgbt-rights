@@ -16,7 +16,7 @@ PGN.core = (function ($) {
 
       cleanRight: function(right, value) {
         switch(right) {
-          case 'marrage':
+          case 'marriage':
             return 'Marriage';
           case 'discrimination':
             return 'Discrimination protections';
@@ -36,6 +36,8 @@ PGN.core = (function ($) {
             return 'Bullying protection';
           case 'housing':
             return 'Housing discrimination protections';
+	  default:
+	    return right;
         }
       },
 
@@ -47,8 +49,18 @@ PGN.core = (function ($) {
             var id = value.id.split(':');
             var name = id[id.length - 1];
             list += '<li class="header">' + name + ' (' + key + ')<ul>';
-            $.each(value.rights, function (key, value) {
-              list += '<li class="' + !!value +'">' + _self.cleanRight(key) + '</li>';
+            value.rights.forEach(function (right) {
+	      if (right.link) {
+		list += '<li class="' + right.value + '"><a href="' + right.link + '" target="_blank">' + right.display_name + '</a>';
+	      } else {
+		list += '<li class="' + right.value + '">' + right.display_name;
+	      }
+
+	      if (right.condition) {
+		//list += '<ul class="none"><li class="none">' + right.condition + '</li></ul>';
+		list += ' (' + right.condition + ')';
+	      }
+	      list += '</li>';
             });
             list += '</ul></li>';
           }
