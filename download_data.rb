@@ -34,7 +34,7 @@ def build_json_from_csv str
 
     state = row[csv.headers.index('State')]
     county = row[csv.headers.index('County')]
-    city = row[csv.headers.index('city')]
+    city = row[csv.headers.index('City')]
 
     id = ""
     type = ""
