@@ -36,8 +36,8 @@ PGN.core = (function ($) {
             return 'Bullying protection';
           case 'housing':
             return 'Housing discrimination protections';
-	  default:
-	    return right;
+	        default:
+	          return right;
         }
       },
 
@@ -50,16 +50,16 @@ PGN.core = (function ($) {
             var name = id[id.length - 1];
             list += '<li class="header">' + name + ' (' + key + ')<ul>';
             $.each(value.rights, function (key2, value2) {
-	      if (value2.more_info) {
+	            if (value2.more_info) {
                 list += '<li class="' + value2.value + '"><a href="/moreinfo?key=' + value.id + '&right=' + key2 + '" target="_blank">' + value2.display_name + '</a>';
-	      } else {
+	            } else {
                 list += '<li class="' + value2.value + '">' + value2.display_name;
-	      }
+	            }
 
-	      if (value.condition) {
+	            if (value.condition) {
                 list += ' (' + value.condition + ')';
-	      }
-	      list += '</li>';
+	            }
+	            list += '</li>';
             });
             list += '</ul></li>';
           }
@@ -83,7 +83,7 @@ PGN.core = (function ($) {
       },
 
       saveData: function (state, rights, title, desc, link) {
-        $.post(
+        $.post({
           url: '/load',
           dataType: 'json',
           success: function (data) {
@@ -96,7 +96,7 @@ PGN.core = (function ($) {
         });
       },
 
-      getDescription: function(key) {
+      getDescription: function(key, right) {
         var state = '';
         var city = '';
         var county = '';
@@ -129,15 +129,20 @@ PGN.core = (function ($) {
                 dataToUse = data.city;
               }
 
-              if (dataToUse && dataToUse != '') {
+							html = dataToUse.rights[right]["more_info"].description;
+
+              /*if (dataToUse && dataToUse != '') {
+                html = "dataToUse";
                 $.each(dataToUse.rights, function (key2, value) {
+									html = key2;
                   if (key2 != '') {
-                    if (value.description) {
+                    if (!!value.description) {
+											html = "in this if";
                       html = value.description;
                     }
                   }
                 });
-              }
+              }*/
 
               $('.content p.desc').append(html);
             }
