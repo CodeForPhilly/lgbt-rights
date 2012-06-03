@@ -42,17 +42,24 @@ PGN.core = (function ($) {
           if (value) {
             var id = value.id.split(':');
             var name = id[id.length - 1];
+						var liclass = '';
             list += '<li class="header">' + name + ' (' + key + ')<ul>';
             $.each(value.rights, function (key2, value2) {
+                var extraText = '';
+                if(value2.value === true) {
+                  liclass = "true";
+                } else if(value2.value === false) {
+                  liclass = "false";
+                } else {
+                  liclass = "other";
+                  extraText = " (" + value2.value + ")";
+                }
 	              if (value2.more_info) {
-                    list += '<li class="' + value2.value + '"><a href="/moreinfo?key=' + value.id + '&right=' + key2 + '" target="_blank">' + _self.cleanRight(key2) + '</a>';
+                    list += '<li class="' + liclass + '"><a href="/moreinfo?key=' + value.id + '&right=' + key2 + '" target="_blank">' + _self.cleanRight(key2) + extraText + '</a>';
 	              } else {
-                    list += '<li class="' + value2.value + '">' + _self.cleanRight(key2);
+                    list += '<li class="' + liclass + '">' + _self.cleanRight(key2) + extraText;
 	              }
 
-	              if (value.condition) {
-                    list += ' (' + value.condition + ')';
-	              }
 	              list += '</li>';
             });
             list += '</ul></li>';

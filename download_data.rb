@@ -92,3 +92,5 @@ def repopulate_redis
 
   send_json_to_redis json
 end
+
+repopulate_redis
