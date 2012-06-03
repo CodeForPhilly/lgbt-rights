@@ -40,8 +40,10 @@ exports.load = function(items, fn) {
         for(var key in val.rights) {
           var right = val.rights[key];
           fieldsToRetain.forEach(function(field) {
-            if(right[field]) {
-              item.rights[key][field] = right[field];
+            if(right[field] instanceof Object) {
+              if(right[field] && !item.rights[key][field]) {
+                item.rights[key][field] = right[field];
+              }
             }
           });
         }
