@@ -87,10 +87,13 @@ end
 
 # this function does all the work to grab the spreadsheet in XML, parse it out into json,
 # and send it into redis.
-def repopulate_redis
+def repopulate_redis node_host = 'localhost', node_port = 3000
   json = spreadsheet_as_json
 
   send_json_to_redis json
 end
 
-repopulate_redis
+host = (ARGV[0] or 'localhost')
+port = (ARGV[1] or 3000)
+
+repopulate_redis host, port
