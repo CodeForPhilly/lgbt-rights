@@ -1,3 +1,5 @@
+var sys = require('sys');
+
 if (process.env.REDISTOGO_URL) {
   var redis = require('redis-url').connect(process.env.REDISTOGO_URL);
 } else {
@@ -19,13 +21,38 @@ exports.rights = function(state, county, city, fn){
 };
 
 // takes in a json file and loads it into redis
-exports.load = function(items, fn){
-  if (!Array.isArray(items)) items = [items];
+exports.load = function(items, fn) {
+  // These fields will be pulled from redis, and if they exist, will be retained when
+  // the data is loaded.
+  var fieldsToRetain = ['more_info'];
+
+  if (!Array.isArray(items)) 
+    items = [items];
+
   var pending = items.length;
-  items.forEach(function(item){ 
-    redis.set(item.id, JSON.stringify(item), function(err) {
-      if (err) fn(err);
-      --pending || fn(null, {success: true});
+  items.forEach(function(item){
+
+    // first, pull out info from redis and make sure we don't clobber it
+    redis.get(item.id, function(err, val) {
+      val = JSON.parse(val);
+
+      if (val && val.rights) {
+        for(var key in val.rights) {
+          var right = val.rights[key];
+          fieldsToRetain.forEach(function(field) {
+            if(right[field]) {
+              item.rights[key][field] = right[field];
+            }
+          });
+        }
+      }
+
+      redis.set(item.id, JSON.stringify(item), function(err) {
+        if (err)
+          fn(err);
+
+        --pending || fn(null, {success: true});
+      });
     });
   });
 };
@@ -47,4 +74,5 @@ exports.list = function(query, fn){
       });
     });
   });
+
 }
