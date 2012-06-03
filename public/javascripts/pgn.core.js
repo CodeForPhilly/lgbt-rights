@@ -44,7 +44,6 @@ PGN.core = (function ($) {
             var name = id[id.length - 1];
             list += '<li class="header">' + name + ' (' + key + ')<ul>';
             $.each(value.rights, function (key2, value2) {
-<<<<<<< HEAD
 	              if (value2.more_info) {
                     list += '<li class="' + value2.value + '"><a href="/moreinfo?key=' + value.id + '&right=' + key2 + '" target="_blank">' + _self.cleanRight(key2) + '</a>';
 	              } else {
@@ -55,18 +54,6 @@ PGN.core = (function ($) {
                     list += ' (' + value.condition + ')';
 	              }
 	              list += '</li>';
-=======
-	            if (value2.more_info) {
-                list += '<li class="' + value2.value + '"><a href="/moreinfo?key=' + value.id + '&right=' + key2 + '" target="_blank">' + value2.display_name + '</a>';
-	            } else {
-                list += '<li class="' + value2.value + '">' + value2.display_name;
-	            }
-
-	            if (value.condition) {
-                list += ' (' + value.condition + ')';
-	            }
-	            list += '</li>';
->>>>>>> 6f6b34201af75bd78d7ce506f85695a0bc9563c0
             });
             list += '</ul></li>';
           }
