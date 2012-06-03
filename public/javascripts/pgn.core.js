@@ -10,35 +10,29 @@ PGN.core = (function ($) {
   var _self;
 
   _self = {
+      nameToDisplayNameMap: {
+          marriage: 'Marriage',
+          workplace_sexual_orientation: 'Workplace discrimination protections (sexual orientation)',
+          workplace_gender_identity: 'Workplace discrimination protections (gender identity)',
+          housing_sexual_orientation: 'Housing discrimination protections (sexual orientation)',
+          housing_gender_identity: 'Housing discrimination protections (gender identity)',
+          hatecrime_sexual_orientation: 'Hate-crime protections (sexual orientation)',
+          hatecrime_gender_identity: 'Hate-crime protections (gender identity)',
+          civil_union: 'Civil unions',
+          domestic_partner: 'Domestic-partner registry',
+          outofstate_marriage_recognition: 'Out-of-state marriage recognition',
+          adoption_single: 'Adoption (single-parent)',
+          second_parent_adoption: 'Adoption (second-parent)',
+          bullying_gender_identity: 'Bullying protections (gender identity)',
+          bullying_sexual_orientation: 'Bullying protections (sexual orientation)'
+      },
+
       injectRights: function (data) {
         $('.content ul.rights').append(_self.buildRightsTemplate(data));
       },
 
       cleanRight: function(right, value) {
-        switch(right) {
-          case 'marriage':
-            return 'Marriage';
-          case 'discrimination':
-            return 'Discrimination protections';
-          case 'domestic_partnership':
-            return 'Domestic-partner registry';
-          case 'civil union':
-            return 'Civil Union';
-          case 'employment':
-            return 'Employment discrimination protections';
-          case 'adoption':
-            return 'Adoption rights';
-          case 'legal_gender_change':
-            return 'Legal gender change';
-          case 'hate_crimes':
-            return 'Hate crimes protections';
-          case 'bullying_protection':
-            return 'Bullying protection';
-          case 'housing':
-            return 'Housing discrimination protections';
-	  default:
-	    return right;
-        }
+          return _self.nameToDisplayNameMap[right];
       },
 
       buildRightsTemplate: function (data) {
@@ -50,16 +44,16 @@ PGN.core = (function ($) {
             var name = id[id.length - 1];
             list += '<li class="header">' + name + ' (' + key + ')<ul>';
             $.each(value.rights, function (key2, value2) {
-	      if (value2.more_info) {
-                list += '<li class="' + value2.value + '"><a href="/moreinfo?key=' + value.id + '&right=' + key2 + '" target="_blank">' + value2.display_name + '</a>';
-	      } else {
-                list += '<li class="' + value2.value + '">' + value2.display_name;
-	      }
+	              if (value2.more_info) {
+                    list += '<li class="' + value2.value + '"><a href="/moreinfo?key=' + value.id + '&right=' + key2 + '" target="_blank">' + _self.cleanRight(key2) + '</a>';
+	              } else {
+                    list += '<li class="' + value2.value + '">' + _self.cleanRight(key2);
+	              }
 
-	      if (value.condition) {
-                list += ' (' + value.condition + ')';
-	      }
-	      list += '</li>';
+	              if (value.condition) {
+                    list += ' (' + value.condition + ')';
+	              }
+	              list += '</li>';
             });
             list += '</ul></li>';
           }
@@ -118,7 +112,7 @@ PGN.core = (function ($) {
         });
       },
 
-      getDescription: function(key) {
+      getDescription: function(key, right) {
         var state = '';
         var city = '';
         var county = '';
@@ -151,15 +145,20 @@ PGN.core = (function ($) {
                 dataToUse = data.city;
               }
 
-              if (dataToUse && dataToUse != '') {
+							html = dataToUse.rights[right]["more_info"].description;
+
+              /*if (dataToUse && dataToUse != '') {
+                html = "dataToUse";
                 $.each(dataToUse.rights, function (key2, value) {
+									html = key2;
                   if (key2 != '') {
-                    if (value.description) {
+                    if (!!value.description) {
+											html = "in this if";
                       html = value.description;
                     }
                   }
                 });
-              }
+              }*/
 
               $('.content p.desc').append(html);
             }
