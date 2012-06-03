@@ -1,77 +1,96 @@
-require 'rexml/document'
 require 'net/http'
-
-include REXML
-
-def get_root_from_url host, resource_url
-  resource = Net::HTTP.new(host, 80)
-  headers, data = resource.get(resource_url)
-  resource.close
-
-  doc = Document.new data
-  doc.root
-end
+require 'json'
+require 'httparty'
+require 'csv'
 
 def parse_text text
-  ["yes"].include? text
+  if ["yes"].include? text
+    true
+  elsif text.nil?
+    false
+  else
+    text
+  end
 end
 
-def build_json root
-  right_names = ["workplacesexualorientation","workplacegenderidentity","housingsexualorientation","housinggenderidentity","hatecrimesexualorientation","hatecrimegenderidentity","marriage","civilunion","domesticpartner","outofstatemarriagerecognition","adoptionsingle","secondparentadoption","bullyinggenderidentity","bullyingsexualorientation"]
-
-  right_name_map = {"workplacesexualorientation"=>"workplace_sexual_orientation", "workplacegenderidentity"=>"workplace_gender_identity", "housingsexualorientation"=>"housing_sexual_orientation", "housinggenderidentity"=>"housing_gender_identity", "hatecrimesexualorientation"=>"hatecrime_sexual_orientation", "hatecrimegenderidentity"=>"hatecrime_gender_identity", "marriage"=>"marriage", "civilunion"=>"civil_union", "domesticpartner"=>"domestic_partner", "outofstatemarriagerecognition"=>"outofstate_marriage_recognition", "adoptionsingle"=>"adoption_single", "secondparentadoption"=>"second_parent_adoption", "bullyinggenderidentity"=>"bullying_gender_identity", "bullyingsexualorientation"=>"bullying_sexual_orientation"}
+def build_json_from_csv str
+  csv = CSV.parse(str, {headers: true})
 
   locations = []
 
-  root.elements.each('//entry') do |location|
-    if location.kind_of? REXML::Element
-      location_json = {}
+  right_names = ["workplace_sexual_orientation", "workplace_gender_identity", "housing_sexual_orientation", "housing_gender_identity", "hatecrime_sexual_orientation", "hatecrime_gender_identity", "marriage", "civil_union", "domestic_partner", "outofstate_marriage_recognition", "adoption_single", "second_parent_adoption", "bullying_gender_identity", "bullying_sexual_orientation"]
 
-      rights = {}
+  csv.each do |row|
+    location_json = {}
+    rights = {}
 
-      right_names.each do |name|
-        elem = location.elements["gsx:#{name}"]
-        if not elem.nil?
-          rights[right_name_map[name]] = {}
-          rights[right_name_map[name]]["value"] = parse_text elem.text
-        end
-      end
+    right_names.each do |right|
+      header_index = csv.headers.index right
+      value = row[header_index]
 
-      state = location.elements["gsx:state"]
-      county = location.elements["gsx:county"]
-      city = location.elements["gsx:city"]
-
-      id = ""
-      type = ""
-
-      if state
-        unless state.text.empty?
-          id = state.text
-          type = "state"
-        end
-      end
-
-      if state and county
-        if county.text and not county.text.empty?
-          id = "#{id}:#{county.text}"
-          type = "county"
-        end
-      end
-
-      if state and county and city
-        if city.text and not city.text.empty?
-          id = "#{id}:#{city.text}"
-          type = "city"
-        end
-      end
-
-      location_json["id"] = id.strip
-      location_json["type"] = type
-      location_json["rights"] = rights
-
-      locations << location_json
+      rights[right] = {}
+      rights[right]["value"] = parse_text value
     end
+
+    state = row[csv.headers.index('State')]
+    county = row[csv.headers.index('County')]
+    city = row[csv.headers.index('City')]
+
+    id = ""
+    type = ""
+
+    if state
+      unless state.empty?
+        id = state.strip
+        type = "state"
+      end
+    end
+
+    if state and county
+      if county and not county.empty?
+        id = "#{id}:#{county.strip}"
+        type = "county"
+      end
+    end
+
+    if state and county and city
+      if city and not city.empty?
+        id = "#{id}:#{city.strip}"
+        type = "city"
+      end
+    end
+
+    location_json["id"] = id.strip
+    location_json["type"] = type
+    location_json["rights"] = rights
+
+    locations << location_json
   end
 
   locations
 end
+
+def spreadsheet_as_json
+  spreadsheet_csv_url = 'https://docs.google.com/spreadsheet/pub?key=0Aj53kqb3f8vYdFdJTnpSYXZKZF9iUVctMEo4bGJkcnc&single=true&gid=0&output=csv'
+
+  text = HTTParty.get(spreadsheet_csv_url).body
+
+  build_json_from_csv text
+end
+
+def send_json_to_redis json, node_host = 'localhost', node_port = 3000
+  load_resource = '/load'
+
+  http = Net::HTTP.new(node_host, node_port)
+  http.post(load_resource, json.to_json, { 'Content-Type' => 'application/json' })
+end
+
+# this function does all the work to grab the spreadsheet in XML, parse it out into json,
+# and send it into redis.
+def repopulate_redis
+  json = spreadsheet_as_json
+
+  send_json_to_redis json
+end
+
+repopulate_redis

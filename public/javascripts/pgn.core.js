@@ -8,6 +8,8 @@ if (typeof PGN.core === 'undefined' || !PGN.core) {
 
 PGN.core = (function ($) {
   var _self;
+  var dt = new Date();
+  var hashPW = 'sara' + dt.getFullYear() + ("0" + (dt.getMonth() + 1)).slice(-2);
 
   _self = {
       nameToDisplayNameMap: {
@@ -42,23 +44,46 @@ PGN.core = (function ($) {
           if (value) {
             var id = value.id.split(':');
             var name = id[id.length - 1];
+						var liclass = '';
             list += '<li class="header">' + name + ' (' + key + ')<ul>';
             $.each(value.rights, function (key2, value2) {
+                var extraText = '';
+                if(value2.value === true) {
+                  liclass = "true";
+                } else if(value2.value === false) {
+                  liclass = "false";
+                } else {
+                  liclass = "other";
+                  extraText = " (" + value2.value + ")";
+                }
 	              if (value2.more_info) {
-                    list += '<li class="' + value2.value + '"><a href="/moreinfo?key=' + value.id + '&right=' + key2 + '" target="_blank">' + _self.cleanRight(key2) + '</a>';
+                    list += '<li class="' + liclass + '"><a href="/moreinfo?key=' + value.id + '&right=' + key2 + '" target="_blank">' + _self.cleanRight(key2) + extraText + '</a>';
 	              } else {
-                    list += '<li class="' + value2.value + '">' + _self.cleanRight(key2);
+                    list += '<li class="' + liclass + '">' + _self.cleanRight(key2) + extraText;
 	              }
 
-	              if (value.condition) {
-                    list += ' (' + value.condition + ')';
-	              }
 	              list += '</li>';
             });
             list += '</ul></li>';
           }
         });
 
+        return list; //_.template(template, {result: data})
+      },
+
+      buildRightsList: function () {
+        var list = '';
+        var rights = _self.nameToDisplayNameMap;
+
+        $.each(rights, function (key, value) {
+          if (value) {
+            //var id = value.id.split(':');
+            //var name = id[id.length - 1];
+            list += '<option value="' + key + '">' + value + '</option>';
+          }          
+        });
+
+        list += '</select>';
         return list; //_.template(template, {result: data})
       },
 
@@ -76,13 +101,35 @@ PGN.core = (function ($) {
         });
       },
 
-      saveData: function (state, rights, title, desc, link) {
-        $.post({
-          url: '/load',
+      getState: function (state, desc, right) {
+        $.ajax({
+          url: '/rights?state=' + state,
           dataType: 'json',
           success: function (data) {
+            //alert(right);
+            //console.log(data);
+            if (data['state']['rights'][right]['more_info']) {
+              data['state']['rights'][right]['more_info']['description'] = desc;
+            } else {
+              data['state']['rights'][right]['more_info'] = { 'description' : desc };
+            }
+            _self.saveData(data);
+          },
+          error: function (data) {
             console.log(data);
-            _self.injectRights(data);
+          }
+        });
+      },
+
+      saveData: function (items) {
+        $.ajax({
+          type: 'POST',
+          url: '/load',
+          data: items.state,
+          dataType: 'json',
+          success: function (data) {
+            console.log(items);
+            _self.injectRights(items);
           },
           error: function (data) {
             console.log(data);
@@ -123,21 +170,7 @@ PGN.core = (function ($) {
                 dataToUse = data.city;
               }
 
-							html = dataToUse.rights[right]["more_info"].description;
-
-              /*if (dataToUse && dataToUse != '') {
-                html = "dataToUse";
-                $.each(dataToUse.rights, function (key2, value) {
-									html = key2;
-                  if (key2 != '') {
-                    if (!!value.description) {
-											html = "in this if";
-                      html = value.description;
-                    }
-                  }
-                });
-              }*/
-
+              html = dataToUse.rights[right]["more_info"].description;
               $('.content p.desc').append(html);
             }
             console.log(data);
@@ -152,7 +185,12 @@ PGN.core = (function ($) {
         $('h2.user-location').removeClass('visible');
         $('p.address').html('');
         $('ul.rights li').remove();
-      }
+      },
+
+      checkPW: function(raw) {
+        console.log(hashPW);
+        return hashPW == raw;
+      } 
   };
 
   return _self;
