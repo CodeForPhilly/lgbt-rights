@@ -3,21 +3,26 @@ require 'json'
 require 'httparty'
 require 'csv'
 
+# the spreadsheet uses "yes" to represent "you have that right", blank to
+# represent "you do not have this right", with any other value being
+# that you have the right "sometimes". in that case we just use the text directly.
 def parse_text text
   if ["yes"].include? text
     true
-  elsif text.nil?
+  elsif text.nil? or text.empty?
     false
   else
     text
   end
 end
 
+# given a string of CSV, parse it and build up the JSON to load into the system
 def build_json_from_csv str
   csv = CSV.parse(str, {headers: true})
 
   locations = []
 
+  # use this to pull the columns
   right_names = ["workplace_sexual_orientation", "workplace_gender_identity", "housing_sexual_orientation", "housing_gender_identity", "hatecrime_sexual_orientation", "hatecrime_gender_identity", "marriage", "civil_union", "domestic_partner", "outofstate_marriage_recognition", "adoption_single", "second_parent_adoption", "bullying_gender_identity", "bullying_sexual_orientation"]
 
   csv.each do |row|
@@ -46,6 +51,7 @@ def build_json_from_csv str
       end
     end
 
+    # to be a county, we have to have a state as well
     if state and county
       if county and not county.empty?
         id = "#{id}:#{county.strip}"
@@ -53,6 +59,7 @@ def build_json_from_csv str
       end
     end
 
+    # to be a city, we need a state and county as well
     if state and county and city
       if city and not city.empty?
         id = "#{id}:#{city.strip}"
@@ -70,6 +77,7 @@ def build_json_from_csv str
   locations
 end
 
+# pulls the spreadsheet from google and turns it into json
 def spreadsheet_as_json
   spreadsheet_csv_url = 'https://docs.google.com/spreadsheet/pub?key=0Aj53kqb3f8vYdFdJTnpSYXZKZF9iUVctMEo4bGJkcnc&single=true&gid=0&output=csv'
 
@@ -78,6 +86,7 @@ def spreadsheet_as_json
   build_json_from_csv text
 end
 
+# given some json and an address, sends the data up.
 def send_json_to_redis json, node_host = 'localhost', node_port = 3000
   load_resource = '/load'
 

@@ -31,16 +31,20 @@ exports.load = function(items, fn) {
 
   var pending = items.length;
   items.forEach(function(item){
-
     // first, pull out info from redis and make sure we don't clobber it
     redis.get(item.id, function(err, val) {
       val = JSON.parse(val);
 
+      // if this value has rights...
       if (val && val.rights) {
+        // look at each right
         for(var key in val.rights) {
           var right = val.rights[key];
+          // for each field we want to keep...
           fieldsToRetain.forEach(function(field) {
             if(right[field] instanceof Object) {
+              // if we have an old value, and we aren't updating it,
+              // set to the old value.
               if(right[field] && !item.rights[key][field]) {
                 item.rights[key][field] = right[field];
               }
