@@ -12,7 +12,7 @@ block content
     <label>Choose Right</label><br>
     select.rightList
        rights = ['', 'Marriage', 'Discrimination protections', 'Domestic-partner registry', 'Civil Union', 'Employment discrimination protections', 'Adoption rights', 'Legal gender change', 'Hate crimes protections', 'Bullying protection', 'Housing discrimination protections']
-       rightvals = ['', 'marrage', 'discrimination', 'domestic_partnership', 'civil union', 'employment', 'adoption', 'legal_gender_change', 'hate_crimes', 'bullying_protection', 'housing']
+       rightvals = ['', 'marriage', 'discrimination', 'domestic_partnership', 'civil union', 'employment', 'adoption', 'legal_gender_change', 'hate_crimes', 'bullying_protection', 'housing']
        for right in rights
          option(value=rightvals[rights.indexOf(right)]) #{right}
     <br>
@@ -30,7 +30,11 @@ block scripts
     $(document).ready(function() {
       $('span.button').click(function() {
         PGN.core.clear();
-        PGN.core.saveData();
+        var inputVal = $('select.stateList').val(),
+            desc = $('input.Desc').val(),
+            right = $('select.rightList').val();
+
+        PGN.core.getState(inputVal, desc, right);
       });
 
       $('select.stateList').change(function () {
