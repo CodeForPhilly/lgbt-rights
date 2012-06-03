@@ -20,6 +20,7 @@ exports.rights = function(state, county, city, fn){
 
 // takes in a json file and loads it into redis
 exports.load = function(items, fn){
+  if (!Array.isArray(items)) items = [items];
   var pending = items.length;
   items.forEach(function(item){ 
     redis.set(item.id, JSON.stringify(item), function(err) {

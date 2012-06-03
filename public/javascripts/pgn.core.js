@@ -82,13 +82,35 @@ PGN.core = (function ($) {
         });
       },
 
-      saveData: function (state, rights, title, desc, link) {
-        $.post(
-          url: '/load',
+      getState: function (state, desc, right) {
+        $.ajax({
+          url: '/rights?state=' + state,
           dataType: 'json',
           success: function (data) {
+            //alert(right);
+            //console.log(data);
+            if (data['state']['rights'][right]['more_info']) {
+              data['state']['rights'][right]['more_info']['description'] = desc;
+            } else {
+              data['state']['rights'][right]['more_info'] = { 'description' : desc };
+            }
+            _self.saveData(data);
+          },
+          error: function (data) {
             console.log(data);
-            _self.injectRights(data);
+          }
+        });
+      },
+
+      saveData: function (items) {
+        $.ajax({
+          type: 'POST',
+          url: '/load',
+          data: items.state,
+          dataType: 'json',
+          success: function (data) {
+            console.log(items);
+            _self.injectRights(items);
           },
           error: function (data) {
             console.log(data);
