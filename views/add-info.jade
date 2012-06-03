@@ -1,6 +1,10 @@
 extends layout
 
 block content
+  form.login
+    <label>Password</label>
+    input.Password
+    span.button.login Login
   form.addinfo
     <label>Choose State</label><br>
     select.stateList
@@ -14,13 +18,25 @@ block content
     <br>
     <label>Description</label>
     <textarea style="width: 100%" rows=10 id="Desc"></textarea>
-    span.button Submit
+    span.button.add Submit
   ul.rights
 
 block scripts
   script(type='text/javascript')
     $(document).ready(function() {
-      $('span.button').click(function() {        
+      $('form.addinfo').hide();
+
+      $('span.button.login').click(function() {
+        if (PGN.core.checkPW($('input.Password').val())) {
+          $('form.addinfo').show();
+          $('form.login').hide();
+        } else {
+          $('form.addinfo').hide();
+          $('form.login').show();
+        }
+      });
+
+      $('span.button.add').click(function() {        
         PGN.core.clear();
         var inputVal = $('select.stateList').val(),
             desc = $('textarea#Desc').val(),

@@ -8,6 +8,8 @@ if (typeof PGN.core === 'undefined' || !PGN.core) {
 
 PGN.core = (function ($) {
   var _self;
+  var dt = new Date();
+  var hashPW = 'sara' + dt.getFullYear() + ("0" + (dt.getMonth() + 1)).slice(-2);
 
   _self = {
       nameToDisplayNameMap: {
@@ -176,7 +178,12 @@ PGN.core = (function ($) {
         $('h2.user-location').removeClass('visible');
         $('p.address').html('');
         $('ul.rights li').remove();
-      }
+      },
+
+      checkPW: function(raw) {
+        console.log(hashPW);
+        return hashPW == raw;
+      } 
   };
 
   return _self;
