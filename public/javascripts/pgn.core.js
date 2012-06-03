@@ -62,6 +62,22 @@ PGN.core = (function ($) {
         return list; //_.template(template, {result: data})
       },
 
+      buildRightsList: function () {
+        var list = '';
+        var rights = _self.nameToDisplayNameMap;
+
+        $.each(rights, function (key, value) {
+          if (value) {
+            //var id = value.id.split(':');
+            //var name = id[id.length - 1];
+            list += '<option value="' + key + '">' + value + '</option>';
+          }          
+        });
+
+        list += '</select>';
+        return list; //_.template(template, {result: data})
+      },
+
       getData: function (params) {
         $.ajax({
           url: '/rights?state=' + params.state + '&city=' + params.city + '&county=' + params.county,
@@ -145,21 +161,7 @@ PGN.core = (function ($) {
                 dataToUse = data.city;
               }
 
-							html = dataToUse.rights[right]["more_info"].description;
-
-              /*if (dataToUse && dataToUse != '') {
-                html = "dataToUse";
-                $.each(dataToUse.rights, function (key2, value) {
-									html = key2;
-                  if (key2 != '') {
-                    if (!!value.description) {
-											html = "in this if";
-                      html = value.description;
-                    }
-                  }
-                });
-              }*/
-
+              html = dataToUse.rights[right]["more_info"].description;
               $('.content p.desc').append(html);
             }
             console.log(data);
