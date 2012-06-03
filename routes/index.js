@@ -8,6 +8,12 @@ module.exports = function(app) {
       subtitle: 'Rights where you are'
     });
   });
+  app.get('/add-info', function(req, res) {
+    res.render('add-info', {
+      title: 'Admin',
+      subtitle: 'Rights where you are'
+    });
+  });
   app.get('/moreinfo', express.query(), function(req, res) {
     res.render('more_info', {
       key: req.query.key,

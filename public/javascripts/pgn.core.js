@@ -44,6 +44,7 @@ PGN.core = (function ($) {
             var name = id[id.length - 1];
             list += '<li class="header">' + name + ' (' + key + ')<ul>';
             $.each(value.rights, function (key2, value2) {
+<<<<<<< HEAD
 	              if (value2.more_info) {
                     list += '<li class="' + value2.value + '"><a href="/moreinfo?key=' + value.id + '&right=' + key2 + '" target="_blank">' + _self.cleanRight(key2) + '</a>';
 	              } else {
@@ -54,6 +55,18 @@ PGN.core = (function ($) {
                     list += ' (' + value.condition + ')';
 	              }
 	              list += '</li>';
+=======
+	            if (value2.more_info) {
+                list += '<li class="' + value2.value + '"><a href="/moreinfo?key=' + value.id + '&right=' + key2 + '" target="_blank">' + value2.display_name + '</a>';
+	            } else {
+                list += '<li class="' + value2.value + '">' + value2.display_name;
+	            }
+
+	            if (value.condition) {
+                list += ' (' + value.condition + ')';
+	            }
+	            list += '</li>';
+>>>>>>> 6f6b34201af75bd78d7ce506f85695a0bc9563c0
             });
             list += '</ul></li>';
           }
@@ -76,35 +89,75 @@ PGN.core = (function ($) {
         });
       },
 
-      getDescription: function(key) {
-        var values = key.split(':')
+      saveData: function (state, rights, title, desc, link) {
+        $.post({
+          url: '/load',
+          dataType: 'json',
+          success: function (data) {
+            console.log(data);
+            _self.injectRights(data);
+          },
+          error: function (data) {
+            console.log(data);
+          }
+        });
+      },
+
+      getDescription: function(key, right) {
         var state = '';
         var city = '';
         var county = '';
+        var split = key.split(':');
 
-        if (value.length == 3) {
-          state = values[0];
-          city = values[1];
-          county = values[2];
-        } else if (value.length == 2) {
-          state = values[0];
-          city = values[1];
-        } else if (value.length == 1) {
-          state = values[0];
+        if (split.length >= 1) {
+          state = split[0];
         }
 
-        var redis = require('redis').createClient();
-        var data = {};
+        if (split.length >= 2) {
+          county = split[1];
+        }
 
-        redis.get(state, function(err, val) {
-          data.state = JSON.parse(val);
-          redis.get(state + ':' + city, function(err, val) {
-            data.county = JSON.parse(val);
-            redis.get(state + ':' + city + ':' + county, function(err, val) {
-              data.city = JSON.parse(val);
-              fn(null, data);
-            });
-          });
+        if (split.length == 3) {
+          city = split[2];
+        }
+
+        $.ajax({
+          url: '/rights?state=' + state + '&city=' + city + '&county=' + county,
+          dataType: 'json',
+          success: function (data) {
+            var html = 'Test';
+            if (data) {
+              var dataToUse = '';
+              if (split.length == 1) {
+                dataToUse = data.state;
+              } else if (split.length == 2) {
+                dataToUse = data.county;
+              } else if (split.length == 3) {
+                dataToUse = data.city;
+              }
+
+							html = dataToUse.rights[right]["more_info"].description;
+
+              /*if (dataToUse && dataToUse != '') {
+                html = "dataToUse";
+                $.each(dataToUse.rights, function (key2, value) {
+									html = key2;
+                  if (key2 != '') {
+                    if (!!value.description) {
+											html = "in this if";
+                      html = value.description;
+                    }
+                  }
+                });
+              }*/
+
+              $('.content p.desc').append(html);
+            }
+            console.log(data);
+          },
+          error: function (data) {
+            console.log(data);
+          }
         });
       },
 
@@ -113,13 +166,6 @@ PGN.core = (function ($) {
         $('p.address').html('');
         $('ul.rights li').remove();
       }
-
-      /*getTitle: function(key) {
-        var redis = require('redis').createClient();
-        redis.get(key, function(err, val) {
-          return JSON.parse(val)
-        });
-      }*/
   };
 
   return _self;

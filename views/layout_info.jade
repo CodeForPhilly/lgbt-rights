@@ -25,7 +25,7 @@ html
           em= right
 
     .content
-      script(type='text/javascript')
-        $(document).ready(function() {
-          PGN.core.getDescription();
-        });
+      block content 
+      != "<script type='text/javascript'>"
+      != "PGN.core.getDescription(\"" + key + "\", \"" + right + "\");"
+      != "</script>"
