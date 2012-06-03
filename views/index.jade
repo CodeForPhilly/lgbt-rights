@@ -35,7 +35,8 @@ block scripts
         });
       });
 
-      $('form.address-search span.button').click(function (evt) {
+
+      var submitForm = function (evt) {
         evt.preventDefault();
         PGN.core.clear();
 
@@ -46,5 +47,8 @@ block scripts
           var params = PGN.geo.parseResp(response[0]);
           PGN.core.getData(params);
         });
-      });
+      };
+
+      $('form.address-search').submit(submitForm);
+      $('form.address-search span.button').click(submitForm);
     });
