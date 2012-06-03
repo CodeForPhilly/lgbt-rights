@@ -1,5 +1,6 @@
 var db = require('../db');
 var express = require('express');
+var spawn = require('child_process').spawn;
 
 module.exports = function(app) {
   app.get('/', function(req, res) {
@@ -36,5 +37,22 @@ module.exports = function(app) {
       if (err) return res.send(err);
       res.send(data);
     });
+  });
+  app.get('/reload', function(req, res) {
+    var url = '';
+    var port = 0;
+
+    if (process.env.REDISTOGO_URL) {
+      url = "lgbtrights.me";
+      port = 80;
+    } else {
+      url = "localhost";
+      port = 3000;
+    }
+    spawn('ruby', ['download_data.rb', url, port]);
+
+    res.setHeader('Content-Type', 'application/json');
+    res.statusCode = 200;
+    res.send('{"success": true}');
   });
 };
