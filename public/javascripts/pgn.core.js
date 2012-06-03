@@ -9,7 +9,7 @@ if (typeof PGN.core === 'undefined' || !PGN.core) {
 PGN.core = (function ($) {
   var _self;
   var dt = new Date();
-  var hashPW = 'sara' + dt.getFullYear() + ("0" + (dt.getMonth() + 1)).slice(-2);
+  var hashPW = 'sarah' + dt.getFullYear() + ("0" + (dt.getMonth() + 1)).slice(-2);
 
   _self = {
       nameToDisplayNameMap: {
@@ -74,6 +74,7 @@ PGN.core = (function ($) {
       buildRightsList: function () {
         var list = '';
         var rights = _self.nameToDisplayNameMap;
+        list += '<option value=""></option>';
 
         $.each(rights, function (key, value) {
           if (value) {
@@ -101,18 +102,18 @@ PGN.core = (function ($) {
         });
       },
 
-      getState: function (state, desc, right) {
+      saveState: function (state, desc, right) {
         $.ajax({
           url: '/rights?state=' + state,
           dataType: 'json',
           success: function (data) {
-            //alert(right);
-            //console.log(data);
+            //alert(right);            
             if (data['state']['rights'][right]['more_info']) {
               data['state']['rights'][right]['more_info']['description'] = desc;
             } else {
               data['state']['rights'][right]['more_info'] = { 'description' : desc };
             }
+            console.log(data);
             _self.saveData(data);
           },
           error: function (data) {
@@ -130,6 +131,23 @@ PGN.core = (function ($) {
           success: function (data) {
             console.log(items);
             _self.injectRights(items);
+          },
+          error: function (data) {
+            console.log(data);
+          }
+        });
+      },
+
+      returnDesc: function (state, right) {
+        $.ajax({
+          url: '/rights?state=' + state,
+          dataType: 'json',
+          success: function (data) {
+            if (data.state.rights[right]['more_info'].description) {
+              $('textarea#Desc').val(data.state.rights[right]['more_info'].description);
+            }
+
+            return '';
           },
           error: function (data) {
             console.log(data);

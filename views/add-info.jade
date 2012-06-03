@@ -43,7 +43,7 @@ block scripts
             right = $('select.rightList').val();
 
         if (inputVal.length > 0 && desc.length > 0 && right.length > 0) {
-          PGN.core.getState(inputVal, desc, right);
+          PGN.core.saveState(inputVal, desc, right);
         } else {
           $('.content ul.rights').append('Not all required fields are valid.');
         }
@@ -58,5 +58,13 @@ block scripts
           PGN.core.getData(params);
         });
         $('.content select.rightList').append(PGN.core.buildRightsList());
+      });
+
+      $('select.rightList').change(function () {
+        PGN.core.clear();
+
+        var state = $('select.stateList').val();
+        var inputVal = $('select.rightList').val();
+        PGN.core.returnDesc(state, inputVal);
       });
     });
