@@ -40,7 +40,12 @@ exports.load = function(items, fn) {
         for(var key in val.rights) {
           var right = val.rights[key];
           fieldsToRetain.forEach(function(field) {
+            sys.log("field: " + field);
+            sys.log(sys.inspect(item.rights[key][field]));
+            sys.log(sys.inspect(!item.rights[key][field]));
             if(right[field] && !item.rights[key][field]) {
+              sys.log(sys.inspect(item));
+              sys.log(sys.inspect(right));
               item.rights[key][field] = right[field];
             }
           });

@@ -48,9 +48,9 @@ PGN.core = (function ($) {
             list += '<li class="header">' + name + ' (' + key + ')<ul>';
             $.each(value.rights, function (key2, value2) {
                 var extraText = '';
-                if(value2.value === true) {
+                if(value2.value === true || value2.value === "true") {
                   liclass = "true";
-                } else if(value2.value === false) {
+                } else if(value2.value === false || value2.value === "false") {
                   liclass = "false";
                 } else {
                   liclass = "other";
