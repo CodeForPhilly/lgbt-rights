@@ -1,14 +1,16 @@
 require 'rexml/document'
 require 'net/http'
+require 'json'
 
 include REXML
 
-def get_root_from_url host, resource_url
-  resource = Net::HTTP.new(host, 80)
-  headers, data = resource.get(resource_url)
-  resource.close
+def get_root_from_url host, spreadsheet_uri
 
-  doc = Document.new data
+  http = Net::HTTP.new(host, 443)
+  http.use_ssl = true
+  response = http.get(spreadsheet_uri)
+
+  doc = Document.new response.body
   doc.root
 end
 
@@ -74,4 +76,19 @@ def build_json root
   end
 
   locations
+end
+
+def repopulate_redis
+  redis_resource = '/load'
+  redis_host = 'localhost'
+  redis_port = 3000
+
+  google_host = 'spreadsheets.google.com'
+  spreadsheet = '/feeds/list/tWINzRavJd_bQW-0J8lbdrw/od6/public/basic'
+
+  root_node = get_root_from_url google_host, spreadsheet
+  json = build_json root_node
+
+  http = Net::HTTP.new(redis_host, 3000)
+  http.post(redis_resource, json.to_json, { 'Content-Type' => 'application/json' })
 end
