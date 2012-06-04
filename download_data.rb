@@ -44,27 +44,21 @@ def build_json_from_csv str
     id = ""
     type = ""
 
-    if state
-      unless state.empty?
-        id = state.strip
-        type = "state"
-      end
+    if state and not state.empty?
+      id = state.strip
+      type = "state"
     end
 
     # to be a county, we have to have a state as well
-    if state and county
-      if county and not county.empty?
-        id = "#{id}:#{county.strip}"
-        type = "county"
-      end
+    if state and county and not county.empty?
+      id = "#{id}:#{county.strip}"
+      type = "county"
     end
 
     # to be a city, we need a state and county as well
-    if state and county and city
-      if city and not city.empty?
-        id = "#{id}:#{city.strip}"
-        type = "city"
-      end
+    if state and county and city and not city.empty?
+      id = "#{id}:#{city.strip}"
+      type = "city"
     end
 
     location_json["id"] = id.strip
